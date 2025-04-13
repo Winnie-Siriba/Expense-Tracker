@@ -1,8 +1,9 @@
 import React from "react";
+import Table from 'react-bootstrap/Table';
 
 function ExpenseTable({expenses, onDelete, onSort}){
 return (
-    <table>
+    <Table stripped bordered hover responsive> 
         <thead>
             <tr>
                 <th>Name</th>
@@ -32,7 +33,7 @@ return (
             ))
             }
         </tbody>
-    </table>
+    </Table>
 )
 }
 export default ExpenseTable;

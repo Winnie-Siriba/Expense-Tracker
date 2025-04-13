@@ -1,5 +1,7 @@
 import './App.css';
-import React, {useState}  from "react"; 
+import React, {useState}  from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import ExpenseForm from './components/ExpenseForm';
 import ExpenseTable from './components/ExpenseTable';
@@ -31,18 +33,25 @@ function App() {
   return (
     <div className="App">
       <h1>Expense Tracker</h1>
-
-      <ExpenseForm onAddExpense={handleAddExpense}/>
-      
-      <ExpenseTable 
-      expenses={filteredExpenses}
-      onDelete={handleDelete}
-      onSort={handleSort}
-      />
-      <SearchBar 
-      searchTerm={searchTerm} 
-      onSearch={setSearchTerm}
-      />
+      <p>Start taking control of your finances and life. Record, categorize and analyze your spending.</p>
+        <Container fluid className="p-4 m-3 border border-dark">
+            <Row>
+              <Col md={4}>
+                <ExpenseForm onAddExpense={handleAddExpense}/>      
+              </Col>
+              <Col md={8} className='border-start border-start-3 border-dark ps-3'>
+                <SearchBar 
+                  searchTerm={searchTerm} 
+                  onSearch={setSearchTerm}
+                />
+                <ExpenseTable 
+                  expenses={filteredExpenses}
+                  onDelete={handleDelete}
+                  onSort={handleSort}
+                />
+              </Col>
+            </Row>
+        </Container>
     </div>
   );
 }

@@ -10,7 +10,7 @@ function ExpenseForm({onAddExpense}){
     const submithandler = (e) =>{
         e.preventDefault() // prevents page from reloading
         onAddExpense({
-            Id:Date.now(), // generates a unique identifier for each expense (built in JS,will not be shown in UI)
+            id:Date.now(), // generates a unique identifier for each expense (built in JS,will not be shown in UI)
             name,
             description,
             category,
@@ -43,7 +43,7 @@ function ExpenseForm({onAddExpense}){
                 <label>Category</label>
                 <select
                 value = {category}
-                onchange = {e => setCategory(e.target.value)}
+                onChange = {e => setCategory(e.target.value)}
                 required>
                 <option value = "Food">Food</option>
                 <option value = "Transport">Transport</option>

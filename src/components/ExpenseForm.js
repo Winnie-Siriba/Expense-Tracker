@@ -2,7 +2,7 @@ import React, {useState}  from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import { Container, Row, Col } from 'react-bootstrap';
+//import { Container, Row, Col } from 'react-bootstrap';
 
 function ExpenseForm({onAddExpense}){
     const [name,setName] = useState('');
@@ -75,7 +75,7 @@ function ExpenseForm({onAddExpense}){
 export default ExpenseForm
 
 
-{/* <form onSubmit ={submithandler}>
+/* {<form onSubmit ={submithandler}>
                 <div> 
                     <label>Name</label>
                     <input 
@@ -126,4 +126,4 @@ export default ExpenseForm
                 </div>
 
                 <button type = "submit">Submit</button>
-            </form> */}
+            </form>} */
